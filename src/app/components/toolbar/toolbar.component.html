@@ -1,0 +1,27 @@
+<div class="toolbar-wrapper">
+    <div class="toolbar-main-wrapper">
+        <a class="toolbar-main" routerLink='/'>Ana Sayfa</a>
+    </div>
+    <div class="toolbar-list-wrapper"> 
+        <ul class="toolbar-list" [class.changestyle]="check">
+            <li class="toolbar-list-item">
+            <a class="toolbar-link" routerLink='/about'>Hakkımda</a>
+            </li>
+            <li class="toolbar-list-item">
+                <a class="toolbar-link" routerLink='/mywork'>Yaptığım İşler</a>
+            </li>
+            <li class="toolbar-list-item">
+            <a class="toolbar-link" routerLink='/comments'>Yorumlar</a>
+            </li>
+            <li class="toolbar-list-item">
+                <a class="toolbar-link" routerLink='/contact'>İletişim</a>
+         </li>
+            <div class="button-wrapper">
+            <button (click)="hideMenu()" class="toolbar-btn">Hide Menu</button>
+            </div>
+        </ul>
+    <div class="button-wrapper">
+        <button (click)="showMenu()" class="toolbar-btn" [class.changebutton]="check">Show Menu</button>
+    </div>
+    </div>
+</div>

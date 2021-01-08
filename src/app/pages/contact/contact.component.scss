@@ -1,0 +1,20 @@
+.contact-wrapper {
+    background: linear-gradient(to right,rgb(192, 192, 255), #7e89ff);
+    margin-top: 72px;
+    height: calc(100vh - 72px);
+    display: flex;
+}
+.contact-index {
+    margin-top: 70px;
+    padding: 20px;
+
+    li{
+        list-style-type: none;
+
+        p {
+            font-size: 22px;
+            color: black;
+            margin-top: 10px;
+        }
+    }
+}

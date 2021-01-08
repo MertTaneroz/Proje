@@ -1,0 +1,14 @@
+.about-wrapper {
+    background: linear-gradient(to right,rgb(192, 192, 255), #7e89ff);
+    margin-top: 72px;
+    height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+}
+.about-index {
+    margin-top: 60px;
+    font-size: 25px;
+    color: white;
+    height: 60px;
+    padding: 20px;
+}

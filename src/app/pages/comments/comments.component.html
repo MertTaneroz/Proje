@@ -1,0 +1,28 @@
+<div class="comments-body">
+    <div class="comments-form-wrapper">
+        <form class="comments-form">
+            <label for="comment">Yorum Yazın</label>
+            <input [value]="comment" (input)="changeHandler($event)" placeholder="Yorumunuzu yazın..." type="text" name="comment" id="comment">
+            <button (click)="addComment($event)">Yorum Ekle</button>
+        </form>
+    </div>
+    <div class="comments-list-wrapper">
+        <h1 class="comments-title">Yorumlar:</h1>
+        <nav *ngIf="commentList.length != 0 ;else elseBlock" class="comments-wrapper">
+            <ul class="comments-list">
+                <li  *ngFor="let comment of commentList">
+                    <div class="comment-div">
+                        {{comment.comment}}
+                    </div>
+                    <div class="comment-button">
+                        <button (click)=deleteComment(comment.id)>Yorumu Sil</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+                    
+        <ng-template #elseBlock>
+            <h3 class="elseBlock">Henüz girilmiş bir yorum yok.</h3>
+        </ng-template>
+    </div>
+</div>
